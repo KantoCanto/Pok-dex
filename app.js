@@ -31,14 +31,19 @@ const fetchPokemon = () => {
 
 const displayPokemon = (pokemon) => {
     console.log(pokemon);
-    const pokemonHTMLString = pokemon.map ( pokemonUnit => "
+    const pokemonHTMLString = pokemon
+        .map (
+             (pokemonUnit) => 
+             "
     <li>
         <img src="${pokemonUnit.image}"/>
         <h2>${pokemonUnit.id}. ${pokemonUnit.name}</h2>
         <p>TYPE: ${pokemonUnit.type}</p>
-    </li>
-    ")
-    pokedex.innerHTML = html;
+    </li>       
+    "
+    )
+    .join('');
+    pokedex.innerHTML = pokemonHTMLString;
 }
 
 fetchPokemon();
