@@ -1,3 +1,6 @@
+//jshint esversion:6
+const pokedex = document.getElementById('pokedex');
+
 const fetchPokemon = () => {
 
     //array of promises
@@ -27,7 +30,15 @@ const fetchPokemon = () => {
 }
 
 const displayPokemon = (pokemon) => {
-    console.log(pokemon)
+    console.log(pokemon);
+    const pokemonHTMLString = pokemon.map ( pokemonUnit => "
+    <li>
+        <img src="${pokemonUnit.image}"/>
+        <h2>${pokemonUnit.id}. ${pokemonUnit.name}</h2>
+        <p>TYPE: ${pokemonUnit.type}</p>
+    </li>
+    ")
+    pokedex.innerHTML = html;
 }
 
 fetchPokemon();
