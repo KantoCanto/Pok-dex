@@ -1,8 +1,23 @@
 *{
     margin: 0;
     padding: 0;
+    background-color: orangered;
+    font-family: rubik;
 }
 
 body{
-    color: red;
+    color: white;
+} 
+
+.card{
+    list-style: none;
+    padding: 40px;
+    background-color: #f4f4f4;
+    color: #222;
+}
+
+#pokedex{
+    padding-inline-start: 0;
+    display: grid;
+    grid-template-columns: minmx(320px, 1fr);
 }

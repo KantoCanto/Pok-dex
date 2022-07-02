@@ -36,9 +36,9 @@ const displayPokemon = (pokemon) => {
              (pokemonUnit) => 
        `      
     <li>
-        <img src="${pokemonUnit.image}"/>
-        <h2>${pokemonUnit.id}. ${pokemonUnit.name}</h2>
-        <p>TYPE: ${pokemonUnit.type}</p>
+        <img class="card-image" src="${pokemonUnit.image}"/>
+        <h2 class="card-title">${pokemonUnit.id}. ${pokemonUnit.name}</h2>
+        <p class="card-subtitle">TYPE: ${pokemonUnit.type}</p>
     </li>       
     `
     )
