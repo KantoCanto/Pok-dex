@@ -9,7 +9,7 @@ const fetchPokemon = () => {
     //itterate from 1 to 150 and call the api in order to fetch each of the pokemons data
     for (let i = 1; i <= 150; i++){
 
-        const url = 'https://pokeapi.co/api/v2/pokemon/' + i;
+        const url = `https://pokeapi.co/api/v2/pokemon/${i}`;
         promises.push(fetch(url).then((res) => res.json()));
     }
 
@@ -34,13 +34,13 @@ const displayPokemon = (pokemon) => {
     const pokemonHTMLString = pokemon
         .map (
              (pokemonUnit) => 
-             "
+       `      
     <li>
         <img src="${pokemonUnit.image}"/>
         <h2>${pokemonUnit.id}. ${pokemonUnit.name}</h2>
         <p>TYPE: ${pokemonUnit.type}</p>
     </li>       
-    "
+    `
     )
     .join('');
     pokedex.innerHTML = pokemonHTMLString;
