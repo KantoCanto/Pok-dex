@@ -35,7 +35,7 @@ const displayPokemon = (pokemon) => {
         .map (
              (pokemonUnit) => 
        `      
-    <li>
+    <li class="card">
         <img class="card-image" src="${pokemonUnit.image}"/>
         <h2 class="card-title">${pokemonUnit.id}. ${pokemonUnit.name}</h2>
         <p class="card-subtitle">TYPE: ${pokemonUnit.type}</p>
